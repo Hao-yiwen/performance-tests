@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-03-15T14:55:16.278Z",
+  "config": {
+    "fibonacci_n": 40,
+    "matrix_size": 1000,
+    "memory_array_size": 10000000,
+    "file_io_size_mb": 1000,
+    "output_file": "nodejs_perf_results.json"
+  },
+  "raw_results": {
+    "fibonacci": {
+      "status": "成功",
+      "duration": 0.645,
+      "output": "计算斐波那契数列第 40 项\n递归方法: 结果 = 102334155, 用时 = 0.606205 秒\n迭代方法: 结果 = 102334155, 用时 = 0.000238 秒\n"
+    },
+    "matrix_mult": {
+      "status": "失败",
+      "duration": 0.032,
+      "output": "/Users/haoyiwen/Documents/web/performance-tests/nodejs/matrix_mult_test.js:1\nonst mathjs = require('mathjs');\n     ^^^^^^\n\nSyntaxError: Unexpected identifier 'mathjs'\n    at wrapSafe (node:internal/modules/cjs/loader:1378:20)\n    at Module._compile (node:internal/modules/cjs/loader:1428:41)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)\n    at Module.load (node:internal/modules/cjs/loader:1288:32)\n    at Module._load (node:internal/modules/cjs/loader:1104:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)\n    at node:internal/main/run_main_module:28:49\n\nNode.js v20.17.0\n"
+    },
+    "memory": {
+      "status": "成功",
+      "duration": 0.401,
+      "output": "初始内存使用: RSS = 31.38 MB, 堆使用 = 2.53 MB\n创建大小为 10000000 的数组...\n数组创建后内存使用: RSS = 188.09 MB (增加 156.72 MB)\n堆使用 = 155.61 MB (增加 153.08 MB)\n数组创建时间: 0.087708 秒\n执行数组求和操作...\n操作后内存使用: RSS = 119.80 MB (增加 -68.30 MB)\n堆使用 = 79.22 MB (增加 -76.38 MB)\n数组求和结果: 49999995000000, 操作时间: 0.068892 秒\n清理后内存使用: RSS = 43.61 MB, 堆使用 = 2.90 MB\n"
+    },
+    "file_io": {
+      "status": "成功",
+      "duration": 0.435,
+      "output": "运行文件I/O测试 (文件大小: 1000MB, 块大小: 1MB)\n开始写入 1000MB 文件...\n写入完成, 用时: 0.169 秒\n写入速度: 5924.77 MB/秒\n开始读取 1000.00MB 文件...\n读取完成, 读取了 1000.00MB, 用时: 0.210 秒\n读取速度: 4762.90 MB/秒\n已删除测试文件 test_large_file.bin\n摘要: 写入用时=0.169秒, 读取用时=0.210秒\n"
+    }
+  },
+  "parsed_results": {
+    "fibonacci": {
+      "recursive_time": 0.606205,
+      "iterative_time": 0.000238
+    },
+    "memory": {
+      "initial_memory": 31.38,
+      "after_creation_memory": 188.09,
+      "memory_increase": 156.72,
+      "creation_time": 0.087708,
+      "operation_time": 0.068892
+    },
+    "file_io": {
+      "write_time": 0.169,
+      "write_speed": 5924.77,
+      "read_time": 0.21,
+      "read_speed": 4762.9
+    }
+  }
+}

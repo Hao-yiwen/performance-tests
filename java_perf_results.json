@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-03-15T23:01:26+08:00",
+  "config": {
+    "fibonacci_n": 40,
+    "matrix_size": 1000,
+    "memory_array_size": 10000000,
+    "file_io_size_mb": 1000
+  },
+  "raw_results": {
+    "fibonacci": {
+  "status": "成功",
+  "duration": 0,
+  "output": "计算斐波那契数列第 40 项\n递归方法: 结果 = 102334155, 用时 = 0.248632 秒\n迭代方法: 结果 = 102334155, 用时 = 0.000001 秒\n"
+},
+    "matrix_mult": {
+  "status": "成功",
+  "duration": 2.0,
+  "output": "执行 1000x1000 矩阵乘法测试\n创建随机矩阵...\n执行矩阵乘法...\n矩阵乘法完成，用时 = 1.455201 秒\n结果矩阵示例元素 [0][0] = 250.800878\n"
+},
+    "memory": {
+  "status": "成功",
+  "duration": 0,
+  "output": "初始内存使用: 4.01 MB\n创建大小为 10000000 的数组...\n数组创建后内存使用: 203.92 MB (增加 199.91 MB)\n数组创建时间: 0.116391 秒\n执行数组求和操作...\n操作后内存使用: 203.92 MB (增加 0.00 MB)\n数组求和结果: 49,999,995,000,000, 操作时间: 0.017636 秒\n清理后内存使用: 4.34 MB\n"
+},
+    "file_io": {
+  "status": "成功",
+  "duration": 1.0,
+  "output": "运行文件I/O测试 (文件大小: 1000MB, 块大小: 1MB)\n开始写入 1000MB 文件 (传统I/O)...\n写入完成, 用时: 0.187 秒\n写入速度: 5361.84 MB/秒\n开始读取 1000.00MB 文件 (传统I/O)...\n读取完成, 读取了 1000.00MB, 用时: 0.187 秒\n读取速度: 5347.96 MB/秒\n开始写入 1000MB 文件 (NIO)...\n写入完成, 用时: 0.008 秒\n写入速度: 131850.02 MB/秒\n开始读取 1.00MB 文件 (NIO)...\n读取完成, 读取了 1.00MB, 用时: 0.000 秒\n读取速度: 2666.67 MB/秒\n已删除测试文件\n\n结果摘要:\n传统I/O: 写入=0.187秒, 读取=0.187秒\nNIO: 写入=0.008秒, 读取=0.000秒\n"
+}
+  },
+  "parsed_results": {
+    "fibonacci": {
+      "recursive_time": 0.248632,
+      "iterative_time": 0.000001
+    },
+    "matrix_mult": {
+      "java_time": 1.455201
+    },
+    "memory": {
+      "initial_memory": 4.01,
+      "after_creation_memory": 203.92,
+      "memory_increase": 199.91
+0.00,
+      "creation_time": 0.116391,
+      "operation_time": 0.017636
+    },
+    "file_io": {
+      "traditional_write_time": 0.187,
+      "traditional_read_time": 0.187
+0.000,
+      "nio_write_time": 0.008,
+      "nio_read_time": 0.000
+    }
+  }
+}

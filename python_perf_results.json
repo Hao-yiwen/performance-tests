@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-03-15T22:57:20.296045",
+  "config": {
+    "fibonacci_n": 40,
+    "matrix_size": 1000,
+    "memory_array_size": 10000000,
+    "file_io_size_mb": 1000,
+    "output_file": "python_perf_results.json"
+  },
+  "raw_results": {
+    "fibonacci": {
+      "status": "\u6210\u529f",
+      "duration": 17.366717100143433,
+      "output": "\u8ba1\u7b97\u6590\u6ce2\u90a3\u5951\u6570\u5217\u7b2c 40 \u9879\n\u9012\u5f52\u65b9\u6cd5: \u7ed3\u679c = 102334155, \u7528\u65f6 = 17.352598 \u79d2\n\u8fed\u4ee3\u65b9\u6cd5: \u7ed3\u679c = 102334155, \u7528\u65f6 = 0.000005 \u79d2\n"
+    },
+    "matrix_mult": {
+      "status": "\u6210\u529f",
+      "duration": 3.0776219367980957,
+      "output": "\u6267\u884c 1000x1000 \u77e9\u9635\u4e58\u6cd5\u6d4b\u8bd5\nNumPy\u5b9e\u73b0: \u7528\u65f6 = 0.013285 \u79d2\n\u77e9\u9635\u592a\u5927\uff0c\u8df3\u8fc7\u624b\u52a8\u5b9e\u73b0\u6d4b\u8bd5\n"
+    },
+    "memory": {
+      "status": "\u6210\u529f",
+      "duration": 0.49477696418762207,
+      "output": "\u521d\u59cb\u5185\u5b58\u4f7f\u7528: 11.53 MB\n\u521b\u5efa\u5927\u5c0f\u4e3a 10000000 \u7684\u6570\u7ec4...\n\u6570\u7ec4\u521b\u5efa\u540e\u5185\u5b58\u4f7f\u7528: 355.14 MB (\u589e\u52a0 343.61 MB)\n\u6570\u7ec4\u521b\u5efa\u65f6\u95f4: 0.134302 \u79d2\n\u6267\u884c\u6570\u7ec4\u6c42\u548c\u64cd\u4f5c...\n\u64cd\u4f5c\u540e\u5185\u5b58\u4f7f\u7528: 402.28 MB (\u589e\u52a0 47.14 MB)\n\u6570\u7ec4\u6c42\u548c\u7ed3\u679c: 49999995000000, \u64cd\u4f5c\u65f6\u95f4: 0.078313 \u79d2\n\u6e05\u7406\u540e\u5185\u5b58\u4f7f\u7528: 20.98 MB\n"
+    },
+    "file_io": {
+      "status": "\u6210\u529f",
+      "duration": 0.37824392318725586,
+      "output": "\u8fd0\u884c\u6587\u4ef6I/O\u6d4b\u8bd5 (\u6587\u4ef6\u5927\u5c0f: 1000MB, \u5757\u5927\u5c0f: 1MB)\n\u5f00\u59cb\u5199\u5165 1000MB \u6587\u4ef6...\n\u5199\u5165\u5b8c\u6210, \u7528\u65f6: 0.162 \u79d2\n\u5199\u5165\u901f\u5ea6: 6163.14 MB/\u79d2\n\u5f00\u59cb\u8bfb\u53d6 1000.00MB \u6587\u4ef6...\n\u8bfb\u53d6\u5b8c\u6210, \u8bfb\u53d6\u4e86 1000.00MB, \u7528\u65f6: 0.182 \u79d2\n\u8bfb\u53d6\u901f\u5ea6: 5501.51 MB/\u79d2\n\u5df2\u5220\u9664\u6d4b\u8bd5\u6587\u4ef6 test_large_file.bin\n"
+    }
+  },
+  "parsed_results": {
+    "fibonacci": {
+      "recursive_time": 17.352598,
+      "iterative_time": 5e-06
+    },
+    "matrix_mult": {
+      "numpy_time": 0.013285
+    },
+    "memory": {
+      "initial_memory": 11.53,
+      "after_creation_memory": 355.14,
+      "memory_increase": 343.61,
+      "creation_time": 0.134302,
+      "operation_time": null
+    },
+    "file_io": {
+      "write_time": 0.162,
+      "write_speed": 6163.14,
+      "read_time": 0.182,
+      "read_speed": 5501.51
+    }
+  }
+}
